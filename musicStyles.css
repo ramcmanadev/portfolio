@@ -1,0 +1,254 @@
+
+
+body {
+    /*color: #7F0;*/
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*color: #F70;*/
+	/*color: #700;*/
+	/*color: #F7F;*/
+	/*color: #F07;*/
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	/*color: #07F;*/
+	/*color: #007;*/
+	color: #777;
+    background-color: #000;
+    font-family: Consolas, Courier, "monospace";
+}
+
+.lambda {
+	font-family: "Times New Roman", Calibri, Symbol, Cambria;
+	font-size: 1.2em;
+	/*color: #7F0;*/
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*OLD: color: #F70;*/
+	color: #700;
+	/*color: #F7F;*/
+	/*color: #F07;*/
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	/*color: #07F;*/
+	/*color: #007;*/
+	/*color: #777;*/
+}
+
+header {
+	text-align: center;
+}
+
+nav {
+	/*display: flex;*/
+	/*justify-content: space-around;*/
+}
+
+a {
+	/*color: #895;*/
+	/*color: #FFD178;*/
+	color: #FF7;
+	/*color: #BED;*/
+	/*color: #3E3;*/
+}
+
+nav > a {
+	/*color: #ABC;*/
+	/*color: #CBA;*/
+	/*color: #5AD;*/
+	/*color: #895;*/
+	/*color: #60D;*/
+	/*color: #987;*/
+	/*color: #321;*/
+	/*color: #123;*/
+	/*color: #789;*/
+	/*color: #BED;*/
+	/*color: #E3E;*/
+	/*color: #3E3;*/
+	/*color: #EE3;*/
+	/*color: #33E;*/
+	/*color: #E33;*/
+	/*color: #3EE;*/
+}
+
+a[href="index.html"] {
+	margin-right: 1em;
+}
+
+a[href="software.html"] {
+	/*color: #ABC;*/
+	/*color: #5AD;*/
+	/*color: #895;*/
+	/*color: #60D;*/
+	/*color: #987;*/
+	/*color: #321;*/
+	/*color: #123;*/
+	/*color: #789;*/
+	/*color: #BED;*/
+	/*margin-right: 1em;*/
+}
+
+a[href="gamedev.html"] {
+	/*color: #123;*/
+	margin-left: 1em;
+	/*margin-right: 1em;*/
+}
+
+
+a[href="music.html"] {
+	/*color: #CFFCFF;*/
+	margin-left: 1em;
+}
+
+p {
+	text-indent: 3em;
+	/*color: #895;*/
+	/*color: #BED;*/
+	/*color: #3E3;*/
+}
+
+#monospace {
+	font-family: "monospace";
+}
+
+#courier {
+	font-family: Courier;
+}
+
+#consolas {
+	font-family: Consolas;
+}
+
+#software {
+	/*OR THIS ONE: color: #F07;*/
+}
+
+.lambdas {
+	font-family: "Times New Roman", Calibri, Symbol, Cambria;
+	font-size: 1.2em;
+	/*color: #7F0;*/
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*OLD: color: #F70;*/
+	/*color: #700;*/
+	/*color: #F7F;*/
+	color: #F07;
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	/*color: #07F;*/
+	/*color: #007;*/
+	/*color: #777;*/
+}
+
+h3 {
+	/*color: #7F0;*/
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*color: #F70;*/
+	/*color: #700;*/
+	/*color: #F7F;*/
+	/*color: #F07;*/
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	/*color: #07F;*/
+	/*color: #007;*/
+	color: #777;
+}
+
+dt {
+	/*color: #7F0;*/
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*color: #F70;*/
+	/*color: #700;*/
+	/*color: #F7F;*/
+	color: #F07;
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	/*color: #07F;*/
+	/*color: #007;*/
+	/*color: #777;*/
+}
+
+dd {
+	/*color: #7F0;*/
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*color: #F70;*/
+	/*color: #700;*/
+	/*color: #F7F;*/
+	/*color: #F07;*/
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	/*color: #07F;*/
+	/*color: #007;*/
+	color: #777;
+}
+
+.lititle {
+	/*color: #7F0;*/
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*color: #F70;*/
+	/*color: #700;*/
+	/*color: #F7F;*/
+	/*color: #F07;*/
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	color: #07F;
+	/*color: #007;*/
+	/*color: #777;*/
+}
+
+ol > li {
+	color: #F07;
+	/*color: #F7F;*/
+}
+
+ol > li > span {
+	color: #F7F;
+}
+
+.keyword {
+	color: #7F0;
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*color: #F70;*/
+	/*color: #700;*/
+	/*color: #F7F;*/
+	/*color: #F07;*/
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	/*color: #07F;*/
+	/*color: #007;*/
+	/*color: #777;*/
+}
+
+footer {
+	text-align: center;
+	/*color: #3E3;*/
+	color: #7F0;
+}
+
+#footers {
+	/*color: #7F0;*/
+	/*color: #0F7;*/
+	/*color: #070;*/
+	/*color: #FF7;*/
+	/*OLD: color: #F70;*/
+	/*color: #700;*/
+	/*color: #F7F;*/
+	color: #F07;
+	/*color: #70F;*/
+	/*color: #7FF;*/
+	/*color: #07F;*/
+	/*color: #007;*/
+	/*color: #777;*/
+}

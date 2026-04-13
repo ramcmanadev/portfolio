@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan's Portfolio - Software</title>
+    <link rel="stylesheet" href="softwareStyles.css">
+    <link rel="icon" href="favicon.svg" type="image/x-icon">
+  </head>
+  <body>
+    <header id="software">
+      <h1><span class=lambdas>&lambda;</span> Ryan McManamy's Software <span class=lambdas>&lambda;</span></h1>
+      <nav>
+        <a href="index.html"><em>Portfolio Home</em></a>
+        <a href="gamedev.html"><em>Game Development</em></a>
+        <a href="music.html"><em>Music Composition</em></a>
+      </nav>
+    </header>
+    <main>
+      <br>
+      <dt>Summary:</dt>
+      <ul>
+        <li><span class="lititle">Languages</span>
+          <ul>
+            <li><span class="keyword"><em>Java, Python, C, C++, JavaScript, SQL, Scheme, and Prolog</em></span></li>
+          </ul>
+        </li>
+        <li><span class="lititle">Concepts</span>
+          <ul>
+            <li><span class="keyword"><em>OOP, UML, C4, and Design Patterns</em></span></li>
+          </ul>
+        </li>
+        <li><span class="lititle">Data Formats</span>
+          <ul>
+            <li><span class="keyword"><em>JSON and XML</em></span></li>
+          </ul>
+        </li>
+        <li><span class="lititle">Tools</span>
+          <ul>
+            <li><span class="keyword"><em>git, GitHub, React, Expo, Vue, Spring Boot, Node, Gradle, JDBC, gRPC, Docker, VMs, AWS EC2, and MATLAB</em></span></li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <h3>Notable Academic Projects</h3>
+      <dl>
+        <dt>Capstone: NASA Psyche Mission AR/WebXR for Public Engagement</dt>
+        <br>
+        <dd>This open-ended, two-semester team project ultimately became a duo of interactive, web-based content (called "Experiences") incorporating some aspects of <span class="keyword"><em>Three.js</em></span>. Our objective was to increase the amount of time spent at Psyche exhibits at educational museums via QR codes scannable by personal devices. As a team of 5 students, we were directed to use the <span class="keyword"><em>Agile/Scrum</em></span> style of software development, with <span class="keyword"><em>git, GitHub, Taiga, and Slack</em></span> as our project management tools. The first Experience featured a 3D model of the Psyche spacecraft with clickable nodes leading to descriptions of the instruments and parts, and a timeline of the mission with a breakdown of each major event. The second Experience featured a more abstract and artistic story full of lore and mythology loosely related to Psyche. These Experiences and more information can be found <a href="https://psyche.ssl.berkeley.edu/get-involved/capstone-projects/capstone-projects-iridium-class/ar-webxr-for-public-engagement-asu-e/"><em>here</em></a>.</dd>
+        <br>
+        <dt>SunDevil Connect Software System</dt>
+        <br>
+        <dd>This final project was optional to do as a team, but having already participated in numerous team-based school projects while contemporaneously being constrained on time and opportunities for adequate coordination and communication, I decided to complete it alone. Although my final submission could have been vastly more polished from an aesthetic standpoint, I was proud of the degree to which I implemented each requirement given the time allotted. The purpose of this system was to allow ASU students and staff to create and manage clubs, as well as create and manage events related to those clubs. The designated medium for this purpose was a website. To accomplish the needed functionality, I used <span class="keyword"><em>HTML, CSS, and JavaScript</em></span> for the frontend, and <span class="keyword"><em>Node.js</em></span> for the backend. My project consisted of a login system (username and password creation and validation), three different access levels (student, club leader, administrator), and the following details for each level: 
+          <ul>
+            <br>
+            <li><span class="lititle">Students</span>
+              <ul>
+                <li>Discover new clubs by searching for keywords or scrolling through the list of available clubs.</li>
+                <li>Request to join a club via button click.</li>
+                <li>Discover events by searching, filtering by cost and/or popularity, or scrolling through the list of all events.</li>
+                <li>Register for an event via button click.</li>
+                <li>Receive approval or denial messages/notifications regarding requests to join clubs</li>
+              </ul>
+            </li>
+            <li><span class="lititle">Club Leaders</span>
+              <ul>
+                <li>Propose new clubs via submitting a form.</li>
+                <li>Approve or deny new members via a messages/notification system.</li>
+                <li>Post club updates by editing fields.</li>
+                <li>Create new events via submitting a form on the respective club page.</li>
+                <li>Receive approval or denial messages/notifications regarding new club proposals.</li>
+              </ul>
+            </li>
+            <li><span class="lititle">Administrators</span>
+              <ul>
+                <li>Flag content and manage flagged content.</li>
+                <li>Approve or deny new clubs via a messages/notification system.</li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+        <br>
+        <dt>Build a REST API</dt>
+        <br>
+        <dd>Having already created a Single-File Component using <span class="keyword"><em>Vue.js</em></span> based on Q&A surveys in a previous assignment, this follow-up assignment had us create a <span class="keyword"><em>REST API</em></span> which modeled the same survey domain using <span class="keyword"><em>Spring Boot</em></span>. The survey domain included the following 4 resources: survey items, survey item instances (states: {completed; not completed}), surveys (states: {created; completed}), and survey instances (states: {created; inProgress; completed}). My completed assignment included the following <span class="keyword"><em>HTTP methods</em></span> and <span class="keyword"><em>CRUD operations</em></span>, with specific <span class="keyword"><em>JSON</em></span> formats for applicable payloads:
+          <ol>
+            <br>
+            <li><span>Create a survey item (POST)</span></li>
+            <li><span>Create a survey (POST)</span></li>
+            <li><span>Add an existing survey item to an existing survey (PUT)</span></li>
+            <li><span>Retrieve the set of all surveys (GET)</span></li>
+            <li><span>Retrieve a specific survey and the set of all survey items in that survey (GET)</span></li>
+            <li><span>Create a survey instance of a survey for a specific user, along with the associated set of survey item instances (POST)</span></li>
+            <li><span>Retrieve the set of all survey instances in a given state (GET)</span></li>
+            <li><span>Retrieve a specific survey instance, along with all of the associated survey item instances (GET)</span></li>
+          </ol>
+        </dd>
+        <br>
+        <dt>Memoranda</dt>
+        <br>
+        <dd>Another team-based project this time with 6 members, designed to teach and practice <span class="keyword"><em>Scrum, git, GitHub, and OOP with Java</em></span>. Our objective was to reverse-engineer a buggy and unfinished diary/calendar/personal project management tool into a martial arts gym scheduling software application. By the end, our team dropped down to 5 members, yet we successfully turned ≈19 requirements into a reality and had a working prototype after a few technical and communicative hiccups...</dd>
+        <br>
+        <dt>Parallel Image Filtering</dt>
+        <br>
+        <dd>This assignment was intense. We coded in <span class="keyword"><em>C</em></span>, compiled using <span class="keyword"><em>GCC</em></span>, and ran on <span class="keyword"><em>Xubuntu</em></span>. We wrote a <span class="keyword"><em>multi-threaded</em></span> program which takes command line arguments, reads the header of an input BMP image file, and then uses a variable amount of threads to split the image into vertical columns, processed in parallel, and applied various filters to them. The first was a box blur filter where each pixel's new value is calculated based on the average of all neighboring pixel values. The second was a so-called "swiss cheese" filter, where we tinted the entire image yellowish, then created random black circles to represent "holes". The result made the image look like a slice of swiss cheese.</dd>
+        <br>
+        <dt>Asynchronous Media and Local Storage</dt>
+        <br>
+        <dd>This assignment was related to mobile systems where we were learning <span class="keyword"><em>React and Expo</em></span>. Our objective was to create a media player that loaded audio files from URIs which could be played, paused, or skipped. For each audio track, there was a "picker" which could be used to rate the track (1 to 5 stars). You could then save your ratings to <span class="keyword"><em>local storage</em></span> so that, upon reloading the app, your ratings would persist.</dd>
+        <br>
+        <dt>Community Emergency Response Team Software</dt>
+        <br>
+        <dd>Using <span class="keyword"><em>Python</em></span> and <span class="keyword"><em>SQLite</em></span>, we created a command line user interface which could import records to a database from a csv file, export records from a database to a csv file, view/display records, and add a new record. Adding a new record entailed a series of prompts for each field in the database. We also performed <span class="keyword"><em>input validation</em></span> for applicable pieces of data.</dd>
+        <br>
+        <dt>♪ The Musician's Toolbox ♪</dt>
+        <br>
+        <dd>This was an open-ended final class project which gave us the freedom to design our own website. I chose to create a website which teaches the basics of music theory, including concept quizzes and ear-training quizzes, while also providing the following tools: a beat generator, a chord generator, a composition sandbox, and a tuner. Although my passion for this project aided in my motivation, it also hindered me in the sense that I took on more than I had the expertise for at the time. Had I chosen a simpler concept, I likely would have had a more polished final project, but I also believe that I learned more by pushing myself to create something more complex that I enjoyed. This was the first course which taught me the basics of <span class="keyword"><em>HTML, CSS, and JavaScript</em></span>, despite having already completed my Capstone project which required me to learn HTML, CSS, and JavaScript on my own without guidance... During this project, I went so far as to create my own <span class="keyword"><em>pixel art</em></span> for musical notation. I used the <span class="keyword"><em>CSS grid display, event listeners, tracked mouse click coordinates, randomly generated tones, used AudioContext, oscillators, setTimeout and setInterval functions, accessed the values of form fields, initialized Audio objects with .ogg files, dynamically adjusted CSS grids using JavaScript, and tied the innerText of an &lt;output&gt; element to the value of an input range slider</em></span>. I am very proud of this unfinished website, and I intend to return to it in the future some day.</dd>
+        <br>
+        <dt>Simple Peer to Peer Chat System</dt>
+        <br>
+        <dd>Using <span class="keyword"><em>Java ClientSockets, ServerSockets, and Threads</em></span>, we created a <span class="keyword"><em>peer to peer</em></span> system where a new node can connect to any previous node on the network, and it will thereby be connected to all nodes. A message entered on the command line from a single node gets sent to all other nodes.</dd>
+        <br>
+        <dt>Grocery Inventory Management System</dt>
+        <br>
+        <dd>In a team of 4, we used <span class="keyword"><em>MySQL</em></span> to create a grocery store database and various queries.</dd>
+        <br>
+        <dt>Learning to Read Japanese</dt>
+        <br>
+        <dd>The final assignment in my data structures & algorithms class, we were instructed to <span class="keyword"><em>topologically sort a directed graph</em></span> of Kanji characters in order to visualize the dependencies when learning the language. We read from text files and inserted a list of character IDs into a <span class="keyword"><em>HashMap</em></span>, created a directed graph with a provided list of edges, and for extra credit we used <span class="keyword"><em>GraphViz</em></span> to visualize the resultant graph.</dd>
+        <br>
+        <dt>Programming Languages Extra Credit</dt>
+        <br>
+        <dd>Wrote a program in two different languages (<span class="keyword"><em>C and Prolog</em></span>), to compare and contrast different styles of programming languages (declarative versus non-declarative). The assignment was a silly yet complicated puzzle regarding an alien language with very specific rules. The goal of the program was to determine whether a given input was a valid alien word based on the specified rules. The two languages had very different ways of naturally solving the problem.</dd>
+        <br>
+        <dt>Project Seymour</dt>
+        <br>
+        <dd>In a team of 4, I got to learn the basics of <span class="keyword"><em>CAD</em></span> and <span class="keyword"><em>Arduino</em></span> circuitry and coding. Our team created a "robot swarm" intended to maintain a personal garden. Each of us were responsible for the design of one of the robots, and I had the robot responsible for providing light and shade to the plants as needed. I used <span class="keyword"><em>C++</em></span> to interface with LED strips, DC motors, a servo motor, distance sensors, and temperature sensors. This allowed me to implement a simulation of the following primary robot functions: measuring plant height, fending off garden intruders, sending temperature data to a central hub, and receiving instructions from the central hub regarding where the plants need light (which LEDs to turn on or off).</dd>
+        <br>
+        <dt>Miscellaneous Discrete Math Extra Credit Python Scripts</dt>
+        <br>
+        <dd>Each homework included an optional <span class="keyword"><em>Python</em></span> script problem:
+          <ol>
+            <br>
+            <li><span>Disprove a logical equivalence programmatically by generating a truth table for (<em>a</em> → <em>b</em>) → (<em>c</em> → <em>d</em>) and (<em>a</em> → (<em>b</em> → <em>c</em>)) → <em>d</em>, and indicating where the statements have different truth values</span></li>
+            <li><span>Find the best approximation of <em>p</em>/<em>q</em> ≈ √2 with 2 ≤ <em>q</em> ≤ 100,000</span></li>
+            <li><span>Systematically find and print all integers <em>a</em>, from <em>a</em> = 1 to 100, for which the function ƒ&#8336;:{1,2,..100} → {1,2,..100}; ƒ(x) = <em>a</em>^<em>x</em> mod 101 is bijective</span></li>
+            <li><span>Compute ƒ(100,000) for the sequence ƒ recursively defined by ƒ(0) = 0; ƒ(1) = 1 and ƒ(<em>n</em>) = ƒ(&lfloor;<em>n</em>/2&rfloor;) + ƒ(&lfloor;<em>n</em>/3&rfloor;) for all <em>n</em> ≥ 2</span></li>
+            <li><span>Print all <em>derangements</em> of 0, 1, 2, 3, 4</span></li>
+          </ol>
+        </dd>
+        <br>
+      </dl>
+      <h3>Personal Projects</h3>
+      <dl>
+        <dt>File Compression Idea</dt>
+        <br>
+        <dd>I had an idea for a technique for compressing binary files, and I implemented it in <span class="keyword"><em>Python</em></span>. However, contrary to my objective, the ouput file size of my algorithm ended up being larger than the input file size. Nevertheless, I still believe that there is a way to utilize my idea. The idea is based on the fact that any computer file of significant size is going to approach an average of 50% 1s and 50% 0s (on and off bits). Knowing this, by eliminating all of one type of value, you could count the occurrences of the remaining values and store them as a single integer, thereby reducing the file size by ≈50%. The problem seems to be related to the other value. Finding and documenting the pattern of occurrences of the other value results in a file size larger than the original.</dd>
+        <br>
+        <dt>Day of the Week Calculator</dt>
+        <br>
+        <dd>Inspired by a Numberphile video about John Conway's "Doomsday" algorithm, I decided to write a <span class="keyword"><em>Python</em></span> program that would take an input date and then calculate what day of the week it falls on.</dd>
+        <br>
+        <dt>Plotting a .wav Audio File</dt>
+        <br>
+        <dd>Curious about the innards of digital audio, I used <span class="keyword"><em>Python</em></span> to plot the data contained within a short .wav file.</dd>
+        <br>
+        <dt>Programmatic Music</dt>
+        <br>
+        <dd>After discovering a simple way to make my computer beep using the <span class="keyword"><em>Python</em></span> winsound module, I managed to teach my computer how to play "Hot Cross Buns".</dd>
+        <br>
+        <dt>Color Palette Generator</dt>
+        <br>
+        <dd>Inspired by indecision and a lack of artistic ability, I used <span class="keyword"><em>HTML, CSS, and JavaScript</em></span> to generate and display color palettes. Among other methods, I started utilizing Platonic and Archimedean solids symmetrically fitted within a cube based on the ranges of possible <span class="keyword"><em>RGB values</em></span> to determine sets of contrasting colors. For instance, this website's color palette was derived by fitting a cuboctahedron within a 16x16x16 cube, and only using colors where the cuboctahedron's vertices touch the outer cube. This is equivalent to the midpoints of all edges of the cube. The values I ultimately used were the closest shorthand form of the calculated coordinates.</dd>
+        <br>
+      </dl>
+      <a href="#"><em>Back to Top</em></a>
+    </main>
+    <footer id="footers">
+      <p>&copy; 2026</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
