@@ -67,42 +67,42 @@ footer {
 
 @media only screen and (max-width: 550px) {
 	h1 {
-		font-size: 5.81vw;
+		font-size: 5.5vw;
 	}
 
 	.lambda {
-		font-size: 6.33vw;
+		font-size: 6vw;
 	}
 
 	a {
-		font-size: 2.9vw;
+		font-size: 2.6vw;
 	}
 
 	p {
-		font-size: 2.9vw;
+		font-size: 2.6vw;
 	}
 
 	h3 {
-		font-size: 3.4vw;
+		font-size: 3.1vw;
 	}
 
 	dt {
-		font-size: 2.9vw;
+		font-size: 2.6vw;
 	}
 
 	dd {
-		font-size: 2.9vw;
+		font-size: 2.6vw;
 	}
 
 	li {
-		font-size: 2.9vw;
+		font-size: 2.6vw;
 	}
 
 	footer {
-		font-size: 2.9vw;
+		font-size: 2.6vw;
 	}
 
 	video {
-		width: 87.2vw;
+		width: 87vw;
 	}
 }

@@ -36,6 +36,10 @@ h3 {
 	color: #F7F;
 }
 
+div {
+	height: 1em;
+}
+
 footer {
 	position: fixed;
 	bottom: 0;
@@ -54,14 +58,14 @@ footer {
 	}
 
 	a {
-		font-size: 2.5vw;
+		font-size: 2.6vw;
 	}
 
 	p {
-		font-size: 2.5vw;
+		font-size: 2.6vw;
 	}
 
 	footer {
-		font-size: 2.5vw;
+		font-size: 2.6vw;
 	}
 }
