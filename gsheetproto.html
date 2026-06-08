@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSheetPrototype</title>
+    <link rel="stylesheet" href="gsheetprotoStyles.css">
+    <link rel="icon" href="favicon.svg" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <h1>GSheetPrototype</h1>
+    </header>
+    <main>
+      <div id="container">
+        <div id="left">
+        </div>
+        <div id="right">
+          <div id="messageContainer">
+            <div id="messages">
+            </div>
+          </div>
+          <div id="messageUI">
+            <textarea id="message" rows="4" cols="50" placeholder="Type your message here..."></textarea>
+            <button id="send" onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--footer>
+      <p>&copy; 2026</p>
+    </footer-->
+    <script src="script.js"></script>
+  </body>
+</html>
