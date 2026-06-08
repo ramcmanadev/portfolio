@@ -8,8 +8,8 @@ async function reqSheet() {
 		const csvText = await response.text();
 		console.log(csvText);
 
-		//const rows = csvText.split("\n").map(row => row.split(","));
-		//console.log(rows);
+		const rows = csvText.split("\n").map(row => row.split(","));
+		console.log(rows);
 	}
 	catch (error) {
 		console.log(error);
