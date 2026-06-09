@@ -2,6 +2,7 @@
 
 
 let players = [];
+let rows;
 
 async function reqSheet() {
 	//const url = "https://docs.google.com/spreadsheets/d//edit?usp=sharing"
@@ -12,7 +13,7 @@ async function reqSheet() {
 		const csvText = await response.text();
 		console.log(csvText);
 
-		const rows = csvText.split("\n").map(row => row.split(","));
+		rows = csvText.split("\n").map(row => row.split(","));
 		console.log(rows);
 
 		for (const r of rows) {
@@ -37,6 +38,9 @@ do {
 } while (player == null || player == "");
 
 player = "\"" + player + "\"";
+
+console.log(player);
+console.log(players[players.indexOf(player)]);
 
 if (players.indexOf(player) >= 0) {
 	loggedIn = rows[players.indexOf(player)][2];
