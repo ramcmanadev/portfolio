@@ -34,7 +34,7 @@ let loggedIn;
 let cancelled = false;
 do {
 	player = prompt("Enter your username:");
-} while (player != null && player != "");
+} while (player == null || player == "");
 
 player = "\"" + player + "\"";
 
@@ -65,7 +65,7 @@ else {
 	playerID = players.length;
 	do {
 		password = prompt("Create your password:");
-	} while (password != null && password != "");
+	} while (password == null || password == "");
 	alert("Success!");
 }
 
