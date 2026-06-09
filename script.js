@@ -33,7 +33,7 @@ let password;
 let loggedIn;
 let cancelled = false;
 do {
-	player = "\"" + prompt("Enter your username:") + "\"";
+	player = prompt("Enter your username:");
 } while (player != null && player != "");
 
 player = "\"" + player + "\"";
