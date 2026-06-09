@@ -25,8 +25,9 @@ async function reqSheet() {
 	}
 }
 
-reqSheet();
-
+console.log("started async");
+await reqSheet();
+console.log("finished async");
 
 
 let player;
