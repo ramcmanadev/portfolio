@@ -2,6 +2,7 @@
 
 
 let players = [];
+let passwords = [];
 let rows;
 
 let player;
@@ -50,9 +51,13 @@ async function reqSheet() {
 					}
 					else {
 						password = "\"" + password + "\"";
-						if (passwords.indexOf(password) >= 0 && passwords.indexOf(password) == players.indexOf(player)) {
+						//if (passwords.indexOf(password) >= 0 && passwords.indexOf(password) == players.indexOf(player)) {
+						if (password == rows[players.indexOf(player)][1]) {
 							loggedIn = "t";
 							alert("Success!");
+						}
+						else {
+							alert("Incorrect password.");
 						}
 					}
 				} while (loggedIn == "\"\"" && cancelled == false);
