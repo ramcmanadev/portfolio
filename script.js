@@ -107,7 +107,7 @@ setTimeout(() => {
 }, 15000);
 
 async function pushState() {
-	const url = "https://script.google.com/macros/s/AKfycbxK8swoIWRmS7UWfwcNZlRt2gsBYnnTAqgp999cO5e7IXyOcLXQ_Rvb88-J8j-cIn1H/exec";
+	const url = "https://script.google.com/macros/s/AKfycbw6rsxZHPGirGy6Bm5MOwLzIg8MJ-_dXZN6qthp-MjbXC90E10LH-VoqXHWmoGtUY_n/exec";
 	localState.state[3] = Date.now();
 
 	if (document.getElementById("send").disabled) {
@@ -118,7 +118,8 @@ async function pushState() {
 		const response = await fetch(url, {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json',
+				'Content-Type': 'text/plain;charset=utf-8',
+				//'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(localState),
 		});
