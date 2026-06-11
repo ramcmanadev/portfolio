@@ -111,17 +111,29 @@ reqSheet();
 // 	pullIntervalID = setInterval(pullState, 10000);
 // }, 25000);
 
+// let pushIntervalID;
+
+// setTimeout(() => {
+// 	pushIntervalID = setInterval(pushState, 8000);
+// }, 20000);
+
+// let pullIntervalID;
+
+// setTimeout(() => {
+// 	pullIntervalID = setInterval(pullState, 8000);
+// }, 24000);
+
 let pushIntervalID;
 
 setTimeout(() => {
-	pushIntervalID = setInterval(pushState, 8000);
+	pushIntervalID = setInterval(pushState, 6000);
 }, 20000);
 
 let pullIntervalID;
 
 setTimeout(() => {
-	pullIntervalID = setInterval(pullState, 8000);
-}, 24000);
+	pullIntervalID = setInterval(pullState, 6000);
+}, 23000);
 
 async function pushState() {
 	console.log("push start:");
