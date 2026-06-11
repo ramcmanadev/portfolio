@@ -21,10 +21,10 @@ async function reqSheet() {
 	try {
 		const response = await fetch(url);
 		const csvText = await response.text();
-		console.log(csvText);
+		//console.log(csvText);
 
 		rows = csvText.split("\n").map(row => row.split(","));
-		console.log(rows);
+		//console.log(rows);
 
 		for (let r of rows) {
 			if (r[1] != "\"\"") {
@@ -40,8 +40,8 @@ async function reqSheet() {
 
 		player = "\"" + player + "\"";
 
-		console.log(player);
-		console.log(players[players.indexOf(player)]);
+		//console.log(player);
+		//console.log(players[players.indexOf(player)]);
 
 		if (players.indexOf(player) >= 0) {
 			loggedIn = rows[players.indexOf(player)][3];
@@ -82,7 +82,7 @@ async function reqSheet() {
 			loggedIn = Date.now();
 		}
 
-		console.log("we made it here.");
+		//console.log("we made it here.");
 		localState.state[0] = playerID;
 		localState.state[1] = player.substring(1, player.length - 1);
 		localState.state[2] = password.substring(1, password.length - 1);
@@ -95,23 +95,37 @@ async function reqSheet() {
 	}
 }
 
-console.log("starting async");
+//console.log("starting async");
 reqSheet();
-console.log("finished async");
+//console.log("finished async");
+
+// let pushIntervalID;
+
+// setTimeout(() => {
+// 	pushIntervalID = setInterval(pushState, 10000);
+// }, 20000);
+
+// let pullIntervalID;
+
+// setTimeout(() => {
+// 	pullIntervalID = setInterval(pullState, 10000);
+// }, 25000);
 
 let pushIntervalID;
 
 setTimeout(() => {
-	pushIntervalID = setInterval(pushState, 10000);
+	pushIntervalID = setInterval(pushState, 8000);
 }, 20000);
 
 let pullIntervalID;
 
 setTimeout(() => {
-	pullIntervalID = setInterval(pullState, 10000);
-}, 25000);
+	pullIntervalID = setInterval(pullState, 8000);
+}, 24000);
 
 async function pushState() {
+	console.log("push start:");
+	console.log(Date.now());
 	const url = "https://script.google.com/macros/s/AKfycbw6rsxZHPGirGy6Bm5MOwLzIg8MJ-_dXZN6qthp-MjbXC90E10LH-VoqXHWmoGtUY_n/exec";
 	localState.state[3] = Date.now();
 	// if (localState.state[4] == lastMessage) {
@@ -133,6 +147,7 @@ async function pushState() {
 		});
 		const data = await response.json();
 		console.log(data);
+		console.log("push end:");
 		console.log(Date.now());
 	}
 	catch (error) {
@@ -141,15 +156,17 @@ async function pushState() {
 }
 
 async function pullState() {
+	console.log("pull start:");
+	console.log(Date.now());
 	const url = "https://docs.google.com/spreadsheets/d/1Th9xJGFQej2nT1ChUcY4j34eW1LD4L_7O-kOUv8RTBk/gviz/tq?tqx=out:csv&sheet=Sheet1";
 
 	try {
 		const response = await fetch(url);
 		const csvText = await response.text();
-		console.log(csvText);
+		//console.log(csvText);
 
 		rows = csvText.split("\n").map(row => row.split(","));
-		console.log(rows);
+		//console.log(rows);
 
 		for (let m of rows.slice(1)) {
 			let newMes = m[4];
@@ -169,6 +186,7 @@ async function pullState() {
 		if (document.getElementById("send").disabled) {
 			document.getElementById("send").disabled = false;
 		}
+		console.log("pull end:");
 		console.log(Date.now());
 	}
 	catch (error) {
