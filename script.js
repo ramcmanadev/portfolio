@@ -76,7 +76,7 @@ async function reqSheet() {
 			do {
 				password = prompt("Create your password:");
 			} while (password == null || password == "");
-			passord = "\"" + password + "\"";
+			password = "\"" + password + "\"";
 			alert("Success!");
 			//localState.state[0] = playerID;
 			loggedIn = Date.now();
@@ -150,7 +150,7 @@ async function pullState() {
 		rows = csvText.split("\n").map(row => row.split(","));
 		console.log(rows);
 
-		for (let m of rows) {
+		for (let m of rows.slice(1)) {
 			let newMes = m[4];
 			if (newMes != "\"\"") {
 				let newP = document.createElement("p");
