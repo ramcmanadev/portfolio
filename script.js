@@ -26,7 +26,7 @@ async function reqSheet() {
 		rows = csvText.split("\n").map(row => row.split(","));
 		console.log(rows);
 
-		for (const r of rows) {
+		for (let r of rows) {
 			if (r[1] != "\"\"") {
 				players.push(r[1]);
 			}
@@ -76,6 +76,7 @@ async function reqSheet() {
 			do {
 				password = prompt("Create your password:");
 			} while (password == null || password == "");
+			passord = "\"" + password + "\"";
 			alert("Success!");
 			//localState.state[0] = playerID;
 			loggedIn = Date.now();
@@ -149,7 +150,7 @@ async function pullState() {
 		rows = csvText.split("\n").map(row => row.split(","));
 		console.log(rows);
 
-		for (const m of rows) {
+		for (let m of rows) {
 			let newMes = m[4];
 			if (newMes != "\"\"") {
 				let newP = document.createElement("p");
@@ -168,12 +169,12 @@ function sendMessage() {
 	//newMessage = document.getElementById("message").value;
 	lastMessage = document.getElementById("message").value;
 	localState.state[4] = document.getElementById("message").value;
-	let newP = document.createElement("p");
+	//let newP = document.createElement("p");
 	//newP.innerText = newMessage;
-	newP.innerText = localState.state[4];
-	document.getElementById("messages").appendChild(newP);
+	//newP.innerText = localState.state[4];
+	//document.getElementById("messages").appendChild(newP);
 	//document.getElementById("messages").scrollTo(0, document.)
-	document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
+	//document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
 	document.getElementById("message").value = "";
 	document.getElementById("send").disabled = true;
 }
