@@ -80,8 +80,8 @@ async function reqSheet() {
 
 		console.log("we made it here.");
 		localState.state[0] = playerID;
-		localState.state[1] = player;
-		localState.state[2] = password;
+		localState.state[1] = player.substring(1, player.length - 1);
+		localState.state[2] = password.substring(1, password.length - 1);
 		localState.state[3] = loggedIn;
 		localState.state[4] = "(" + player + " has joined!)";
 	}
@@ -144,10 +144,12 @@ async function pullState() {
 
 		for (const m of rows) {
 			let newMes = m[4];
-			let newP = document.createElement("p");
-			newP.innerText = newMes;
-			document.getElementById("messages").appendChild(newP);
-			document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
+			if (newMes != "\"\"") {
+				let newP = document.createElement("p");
+				newP.innerText = newMes.substring(1, newMes.length - 1);
+				document.getElementById("messages").appendChild(newP);
+				document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
+			}
 		}
 	}
 	catch (error) {
