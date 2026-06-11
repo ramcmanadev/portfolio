@@ -11,7 +11,7 @@ let player;
 let password;
 let loggedIn;
 //let newMessage;
-let lastMessage = "";
+//let lastMessage = "";
 let cancelled = false;
 
 async function reqSheet() {
@@ -114,13 +114,13 @@ setTimeout(() => {
 async function pushState() {
 	const url = "https://script.google.com/macros/s/AKfycbw6rsxZHPGirGy6Bm5MOwLzIg8MJ-_dXZN6qthp-MjbXC90E10LH-VoqXHWmoGtUY_n/exec";
 	localState.state[3] = Date.now();
-	if (localState.state[4] == lastMessage) {
-		localState.state[4] = "";
-	}
+	// if (localState.state[4] == lastMessage) {
+	// 	localState.state[4] = "";
+	// }
 
-	if (document.getElementById("send").disabled) {
-		document.getElementById("send").disabled = false;
-	}
+	// if (document.getElementById("send").disabled) {
+	// 	document.getElementById("send").disabled = false;
+	// }
 
 	try {
 		const response = await fetch(url, {
@@ -155,13 +155,18 @@ async function pullState() {
 			if (newMes != "\"\"") {
 				//console.log(m[1] + " versus " + localState[1]);
 				if (m[1] == "\"" + localState.state[1] + "\"") {
-					lastMessage = localState.state[4];
+					//lastMessage = localState.state[4];
+					localState.state[4] = "";
 				}
 				let newP = document.createElement("p");
 				newP.innerText = newMes.substring(1, newMes.length - 1);
 				document.getElementById("messages").appendChild(newP);
-				document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
+				//document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
 			}
+		}
+		document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
+		if (document.getElementById("send").disabled) {
+			document.getElementById("send").disabled = false;
 		}
 	}
 	catch (error) {
