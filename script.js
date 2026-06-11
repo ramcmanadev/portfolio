@@ -35,20 +35,6 @@ async function reqSheet() {
 			}
 		}
 
-		if (players.length >= 5) {
-			alert("Sorry, this room is full.");
-			return;
-		}
-		else {
-			setTimeout(() => {
-				pushIntervalID = setInterval(pushState, 5000);
-			}, 20000);
-
-			setTimeout(() => {
-				pullIntervalID = setInterval(pullState, 5000);
-			}, 24000);
-		}
-
 		do {
 			player = prompt("Enter your username:");
 		} while (player == null || player == "");
@@ -86,6 +72,10 @@ async function reqSheet() {
 			}
 		}
 		else {
+			if (players.length >= 5) {
+				alert("Sorry, this room is full.");
+				return;
+			}
 			alert("New player created!");
 			playerID = players.length + 1;
 			do {
@@ -104,6 +94,14 @@ async function reqSheet() {
 		localState.state[3] = loggedIn;
 		localState.state[4] = "(" + player.substring(1, player.length - 1) + " has joined!)";
 		//lastMessage = "(" + player + " has joined!)";
+
+		setTimeout(() => {
+			pushIntervalID = setInterval(pushState, 5000);
+		}, 20000);
+
+		setTimeout(() => {
+			pullIntervalID = setInterval(pullState, 5000);
+		}, 24000);
 	}
 	catch (error) {
 		console.log(error);
