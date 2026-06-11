@@ -11,6 +11,7 @@ let player;
 let password;
 let loggedIn;
 //let newMessage;
+let lastMessage;
 let cancelled = false;
 
 async function reqSheet() {
@@ -26,7 +27,9 @@ async function reqSheet() {
 		console.log(rows);
 
 		for (const r of rows) {
-			players.push(r[1]);
+			if (r[1] != "\"\"") {
+				players.push(r[1]);
+			}
 		}
 
 
@@ -84,6 +87,7 @@ async function reqSheet() {
 		localState.state[2] = password.substring(1, password.length - 1);
 		localState.state[3] = loggedIn;
 		localState.state[4] = "(" + player + " has joined!)";
+		lastMessage = "(" + player + " has joined!)";
 	}
 	catch (error) {
 		console.log(error);
@@ -98,17 +102,20 @@ let pushIntervalID;
 
 setTimeout(() => {
 	pushIntervalID = setInterval(pushState, 5000);
-}, 12500);
+}, 32500);
 
 let pullIntervalID;
 
 setTimeout(() => {
 	pullIntervalID = setInterval(pullState, 5000);
-}, 15000);
+}, 35000);
 
 async function pushState() {
 	const url = "https://script.google.com/macros/s/AKfycbw6rsxZHPGirGy6Bm5MOwLzIg8MJ-_dXZN6qthp-MjbXC90E10LH-VoqXHWmoGtUY_n/exec";
 	localState.state[3] = Date.now();
+	if (localState.state[4] == lastMessage) {
+		localState.state[4] = "";
+	}
 
 	if (document.getElementById("send").disabled) {
 		document.getElementById("send").disabled = false;
@@ -159,6 +166,7 @@ async function pullState() {
 
 function sendMessage() {
 	//newMessage = document.getElementById("message").value;
+	lastMessage = document.getElementById("message").value;
 	localState.state[4] = document.getElementById("message").value;
 	let newP = document.createElement("p");
 	//newP.innerText = newMessage;
