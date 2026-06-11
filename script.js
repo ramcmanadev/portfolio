@@ -87,7 +87,7 @@ async function reqSheet() {
 		localState.state[1] = player.substring(1, player.length - 1);
 		localState.state[2] = password.substring(1, password.length - 1);
 		localState.state[3] = loggedIn;
-		localState.state[4] = "(" + player + " has joined!)";
+		localState.state[4] = "(" + player.substring(1, player.length - 1) + " has joined!)";
 		//lastMessage = "(" + player + " has joined!)";
 	}
 	catch (error) {
@@ -153,6 +153,7 @@ async function pullState() {
 		for (let m of rows.slice(1)) {
 			let newMes = m[4];
 			if (newMes != "\"\"") {
+				console.log(m[1] + " versus " + localState[1]);
 				if (m[1] == "\"" + localState[1] + "\"") {
 					lastMessage = localState[4];
 				}
