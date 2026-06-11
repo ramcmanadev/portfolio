@@ -14,6 +14,9 @@ let loggedIn;
 //let lastMessage = "";
 let cancelled = false;
 
+let pushIntervalID;
+let pullIntervalID;
+
 async function reqSheet() {
 	//const url = "https://docs.google.com/spreadsheets/d//edit?usp=sharing"
 	const url = "https://docs.google.com/spreadsheets/d/1Th9xJGFQej2nT1ChUcY4j34eW1LD4L_7O-kOUv8RTBk/gviz/tq?tqx=out:csv&sheet=Sheet1";
@@ -32,9 +35,18 @@ async function reqSheet() {
 			}
 		}
 
-		if (players.length > 5) {
+		if (players.length >= 5) {
 			alert("Sorry, this room is full.");
 			return;
+		}
+		else {
+			setTimeout(() => {
+				pushIntervalID = setInterval(pushState, 5000);
+			}, 20000);
+
+			setTimeout(() => {
+				pullIntervalID = setInterval(pullState, 5000);
+			}, 24000);
 		}
 
 		do {
@@ -126,18 +138,18 @@ reqSheet();
 // 	pullIntervalID = setInterval(pullState, 8000);
 // }, 24000);
 
-let pushIntervalID;
-let pullIntervalID;
+// let pushIntervalID;
+// let pullIntervalID;
 
-if (players.length <= 5) {
-	setTimeout(() => {
-		pushIntervalID = setInterval(pushState, 5000);
-	}, 20000);
+// if (players.length < 5) {
+// 	setTimeout(() => {
+// 		pushIntervalID = setInterval(pushState, 5000);
+// 	}, 20000);
 
-	setTimeout(() => {
-		pullIntervalID = setInterval(pullState, 5000);
-	}, 24000);
-}
+// 	setTimeout(() => {
+// 		pullIntervalID = setInterval(pullState, 5000);
+// 	}, 24000);
+// }
 
 async function pushState() {
 	console.log("push start:");
