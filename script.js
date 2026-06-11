@@ -102,14 +102,14 @@ console.log("finished async");
 let pushIntervalID;
 
 setTimeout(() => {
-	pushIntervalID = setInterval(pushState, 8000);
-}, 34000);
+	pushIntervalID = setInterval(pushState, 20000);
+}, 20000);
 
 let pullIntervalID;
 
 setTimeout(() => {
-	pullIntervalID = setInterval(pullState, 8000);
-}, 38000);
+	pullIntervalID = setInterval(pullState, 20000);
+}, 30000);
 
 async function pushState() {
 	const url = "https://script.google.com/macros/s/AKfycbw6rsxZHPGirGy6Bm5MOwLzIg8MJ-_dXZN6qthp-MjbXC90E10LH-VoqXHWmoGtUY_n/exec";
