@@ -126,14 +126,14 @@ reqSheet();
 let pushIntervalID;
 
 setTimeout(() => {
-	pushIntervalID = setInterval(pushState, 6000);
+	pushIntervalID = setInterval(pushState, 5000);
 }, 20000);
 
 let pullIntervalID;
 
 setTimeout(() => {
-	pullIntervalID = setInterval(pullState, 6000);
-}, 23000);
+	pullIntervalID = setInterval(pullState, 5000);
+}, 24000);
 
 async function pushState() {
 	console.log("push start:");
