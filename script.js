@@ -32,7 +32,10 @@ async function reqSheet() {
 			}
 		}
 
-
+		if (players.length > 5) {
+			alert("Sorry, this room is full.");
+			return;
+		}
 
 		do {
 			player = prompt("Enter your username:");
@@ -124,16 +127,17 @@ reqSheet();
 // }, 24000);
 
 let pushIntervalID;
-
-setTimeout(() => {
-	pushIntervalID = setInterval(pushState, 5000);
-}, 20000);
-
 let pullIntervalID;
 
-setTimeout(() => {
-	pullIntervalID = setInterval(pullState, 5000);
-}, 24000);
+if (players.length <= 5) {
+	setTimeout(() => {
+		pushIntervalID = setInterval(pushState, 5000);
+	}, 20000);
+
+	setTimeout(() => {
+		pullIntervalID = setInterval(pullState, 5000);
+	}, 24000);
+}
 
 async function pushState() {
 	console.log("push start:");
@@ -209,7 +213,8 @@ async function pullState() {
 function sendMessage() {
 	//newMessage = document.getElementById("message").value;
 	//lastMessage = document.getElementById("message").value;
-	localState.state[4] = document.getElementById("message").value;
+	//localState.state[4] = document.getElementById("message").value;
+	localState.state[4] = localState.state[1] + ": " + document.getElementById("message").value;
 	//let newP = document.createElement("p");
 	//newP.innerText = newMessage;
 	//newP.innerText = localState.state[4];
