@@ -102,14 +102,14 @@ console.log("finished async");
 let pushIntervalID;
 
 setTimeout(() => {
-	pushIntervalID = setInterval(pushState, 6000);
-}, 33000);
+	pushIntervalID = setInterval(pushState, 8000);
+}, 34000);
 
 let pullIntervalID;
 
 setTimeout(() => {
-	pullIntervalID = setInterval(pullState, 6000);
-}, 36000);
+	pullIntervalID = setInterval(pullState, 8000);
+}, 38000);
 
 async function pushState() {
 	const url = "https://script.google.com/macros/s/AKfycbw6rsxZHPGirGy6Bm5MOwLzIg8MJ-_dXZN6qthp-MjbXC90E10LH-VoqXHWmoGtUY_n/exec";
@@ -133,6 +133,7 @@ async function pushState() {
 		});
 		const data = await response.json();
 		console.log(data);
+		console.log(Date.now());
 	}
 	catch (error) {
 		console.log(error);
@@ -168,6 +169,7 @@ async function pullState() {
 		if (document.getElementById("send").disabled) {
 			document.getElementById("send").disabled = false;
 		}
+		console.log(Date.now());
 	}
 	catch (error) {
 		console.log(error);
