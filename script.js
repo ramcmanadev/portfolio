@@ -153,9 +153,9 @@ async function pullState() {
 		for (let m of rows.slice(1)) {
 			let newMes = m[4];
 			if (newMes != "\"\"") {
-				console.log(m[1] + " versus " + localState[1]);
-				if (m[1] == "\"" + localState[1] + "\"") {
-					lastMessage = localState[4];
+				//console.log(m[1] + " versus " + localState[1]);
+				if (m[1] == "\"" + localState.state[1] + "\"") {
+					lastMessage = localState.state[4];
 				}
 				let newP = document.createElement("p");
 				newP.innerText = newMes.substring(1, newMes.length - 1);
